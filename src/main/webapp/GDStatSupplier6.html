@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaraMan - Thống kê nhà cung cấp</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+  <main>
+    <div class="card">
+      <div class="crumb">Báo cáo › Thống kê nhà cung cấp theo lượng nhập</div>
+      <h1>Thống kê nhà cung cấp theo lượng nhập</h1>
+      <p class="sub" id="range"></p>
+      <div id="msg" class="alert err hidden"></div>
+      <table id="tbl" class="hidden">
+        <thead><tr><th>TT</th><th>Mã NCC</th><th>Tên nhà cung cấp</th><th>Địa chỉ</th><th class="num">Tổng số lượng nhập</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="sub hidden" id="empty">Không có dữ liệu nhập hàng trong khoảng thời gian đã chọn.</p>
+      <div class="btns"><a class="btn secondary" id="back" href="GDSelectDate6.html">Quay lại</a></div>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/GDStatSupplier6.js"></script>
+</body>
+</html>

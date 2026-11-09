@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaraMan - Hóa đơn nhập</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+  <main>
+    <div class="card">
+      <div class="crumb">Báo cáo › Thống kê nhà cung cấp › Các lần nhập › Hóa đơn nhập</div>
+      <h1>Hóa đơn nhập</h1>
+      <div id="msg" class="alert err hidden"></div>
+      <div id="content" class="hidden">
+        <dl class="kv">
+          <dt>Mã hóa đơn</dt><dd id="code"></dd>
+          <dt>Ngày nhập</dt><dd id="date"></dd>
+          <dt>Nhà cung cấp</dt><dd id="sup"></dd>
+          <dt>Người lập</dt><dd id="staff"></dd>
+          <dt>Ghi chú</dt><dd id="note"></dd>
+        </dl>
+        <table>
+          <thead><tr><th>TT</th><th>Mã PT</th><th>Tên phụ tùng</th><th class="num">Số lượng</th><th class="num">Đơn giá</th><th class="num">Thành tiền</th></tr></thead>
+          <tbody id="lines"></tbody>
+          <tfoot><tr><td colspan="5" class="num">Tổng tiền</td><td class="num" id="total"></td></tr></tfoot>
+        </table>
+      </div>
+      <div class="btns">
+        <a class="btn secondary" id="back" href="GDImportList6.html">Quay lại</a>
+        <button class="btn" onclick="window.print()">In hóa đơn</button>
+      </div>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/GDImportDetail6.js"></script>
+</body>
+</html>

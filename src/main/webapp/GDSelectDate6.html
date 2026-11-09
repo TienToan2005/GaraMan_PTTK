@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaraMan - Chọn thời gian thống kê</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+  <main>
+    <div class="card">
+      <div class="crumb">Báo cáo › Thống kê nhà cung cấp theo lượng nhập</div>
+      <h1>Chọn thời gian thống kê</h1>
+      <p class="sub">Thống kê nhà cung cấp theo lượng hàng nhập trong khoảng thời gian.</p>
+      <form id="form" novalidate>
+        <div class="row">
+          <div><label for="start">Từ ngày</label><input type="date" id="start"></div>
+          <div><label for="end">Đến ngày</label><input type="date" id="end"></div>
+        </div>
+        <div id="msg" class="alert err hidden"></div>
+        <div class="btns">
+          <a class="btn secondary" href="GDHomeManager6.html">Quay lại</a>
+          <button class="btn" type="submit">Thống kê</button>
+        </div>
+      </form>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/GDSelectDate6.js"></script>
+</body>
+</html>

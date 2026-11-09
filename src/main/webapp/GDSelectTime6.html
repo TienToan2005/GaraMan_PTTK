@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaraMan - Chọn ngày giờ</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+  <main>
+    <div class="card">
+      <div class="crumb">Đặt lịch hẹn › Bước 1/2: Chọn ngày giờ</div>
+      <h1>Chọn ngày giờ</h1>
+      <p class="sub">Chọn ngày và khung giờ bạn muốn mang xe tới gara.</p>
+      <label for="date">Ngày hẹn</label>
+      <input type="date" id="date">
+      <label>Giờ hẹn</label>
+      <div id="slots" class="slots"><span class="sub">Hãy chọn ngày để xem các khung giờ.</span></div>
+      <div id="msg" class="alert err hidden"></div>
+      <div class="btns">
+        <a class="btn secondary" href="GDHomeCus6.html">Quay lại</a>
+        <button class="btn" id="next" disabled>Tiếp tục</button>
+      </div>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/GDSelectTime6.js"></script>
+</body>
+</html>

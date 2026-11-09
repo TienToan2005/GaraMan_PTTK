@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaraMan - Các lần nhập của nhà cung cấp</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+  <main>
+    <div class="card">
+      <div class="crumb">Báo cáo › Thống kê nhà cung cấp › Các lần nhập</div>
+      <h1>Các lần nhập của nhà cung cấp</h1>
+      <dl class="kv"><dt>Nhà cung cấp</dt><dd id="sup"></dd><dt>Khoảng thời gian</dt><dd id="range"></dd></dl>
+      <div id="msg" class="alert err hidden"></div>
+      <table id="tbl" class="hidden">
+        <thead><tr><th>TT</th><th>Mã lần nhập</th><th>Ngày nhập</th><th>Người lập</th><th class="num">Số lượng</th></tr></thead>
+        <tbody></tbody>
+      </table>
+      <p class="sub hidden" id="empty">Không có lần nhập nào trong khoảng thời gian đã chọn.</p>
+      <div class="btns"><a class="btn secondary" id="back" href="GDStatSupplier6.html">Quay lại</a></div>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/GDImportList6.js"></script>
+</body>
+</html>

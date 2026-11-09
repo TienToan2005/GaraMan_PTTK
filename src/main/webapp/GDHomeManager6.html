@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaraMan - Trang chủ quản lí</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+  <main>
+    <div class="card">
+      <h1>Trang chủ quản lí</h1>
+      <p class="sub" id="hello"></p>
+      <ul class="menu">
+        <li><span class="item off">Quản lí dịch vụ (chưa triển khai)</span></li>
+        <li><span class="item off">Quản lí phụ tùng (chưa triển khai)</span></li>
+        <li>
+          <a href="#" id="reportToggle" aria-expanded="false">Xem báo cáo ▸</a>
+          <ul class="sub-menu hidden" id="reportMenu">
+            <li><span class="item off">Thống kê dịch vụ</span></li>
+            <li><span class="item off">Thống kê phụ tùng</span></li>
+            <li><span class="item off">Thống kê khách hàng</span></li>
+            <li><a href="GDSelectDate6.html">Thống kê nhà cung cấp theo lượng nhập</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script>
+    requireRole('MANAGER').then(function (me) {
+      document.getElementById('hello').textContent = 'Xin chào: ' + me.fullName;
+    });
+    document.getElementById('reportToggle').addEventListener('click', function (e) {
+      e.preventDefault();
+      const menu = document.getElementById('reportMenu');
+      const open = menu.classList.toggle('hidden') === false;
+      this.setAttribute('aria-expanded', open);
+      this.textContent = open ? 'Xem báo cáo ▾' : 'Xem báo cáo ▸';
+    });
+  </script>
+</body>
+</html>

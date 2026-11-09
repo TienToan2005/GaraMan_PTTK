@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaraMan - Nhập thông tin cá nhân</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar" id="topbar"></div>
+  <main>
+    <div class="card" id="formCard">
+      <div class="crumb">Đặt lịch hẹn › Bước 2/2: Nhập thông tin cá nhân</div>
+      <h1>Nhập thông tin cá nhân</h1>
+      <dl class="kv"><dt>Ngày giờ hẹn</dt><dd id="when"></dd></dl>
+      <form id="form" novalidate>
+        <label for="name">Họ tên</label>
+        <input type="text" id="name" autocomplete="name">
+        <div class="row">
+          <div><label for="phone">Số điện thoại</label><input type="tel" id="phone" autocomplete="tel" placeholder="0912345678"></div>
+          <div><label for="plate">Biển số xe</label><input type="text" id="plate" placeholder="30A-123.45"></div>
+        </div>
+        <div id="msg" class="alert err hidden"></div>
+        <div class="btns">
+          <a class="btn secondary" href="GDSelectTime6.html">Quay lại</a>
+          <button class="btn" type="submit" id="submit">Xác nhận</button>
+        </div>
+      </form>
+    </div>
+
+    <div class="card hidden" id="doneCard">
+      <div class="success-box">
+        <div class="tick">✓</div>
+        <h1>Đặt lịch hẹn thành công!</h1>
+        <dl class="kv" style="text-align:left;max-width:420px;margin:16px auto">
+          <dt>Mã lịch hẹn</dt><dd id="rId"></dd>
+          <dt>Ngày giờ hẹn</dt><dd id="rWhen"></dd>
+          <dt>Biển số xe</dt><dd id="rPlate"></dd>
+          <dt>Người liên hệ</dt><dd id="rName"></dd>
+          <dt>Trạng thái</dt><dd id="rStatus"></dd>
+        </dl>
+        <div class="btns" style="justify-content:center"><a class="btn" href="GDHomeCus6.html">Về trang chủ</a></div>
+      </div>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/GDInputInfo6.js"></script>
+</body>
+</html>

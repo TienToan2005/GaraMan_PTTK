@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GaraMan - Đăng nhập</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="topbar" id="topbar"><span class="brand">GaraMan</span></div>
+  <main>
+    <div class="card" style="max-width:440px;margin:0 auto">
+      <h1>Đăng nhập</h1>
+      <p class="sub">Hệ thống quản lí gara ô tô GaraMan</p>
+      <form id="loginForm" novalidate>
+        <label for="username">Tên đăng nhập</label>
+        <input type="text" id="username" autocomplete="username" autofocus>
+        <label for="password">Mật khẩu</label>
+        <input type="password" id="password" autocomplete="current-password">
+        <div id="msg" class="alert err hidden"></div>
+        <div class="btns"><button class="btn" type="submit">Đăng nhập</button></div>
+      </form>
+      <p class="sub" style="margin-top:18px">Tài khoản mẫu (mật khẩu 123456): <b>khach1</b> (khách hàng), <b>quanli1</b> (nhân viên quản lí).</p>
+    </div>
+  </main>
+  <script src="js/common.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
