@@ -6,12 +6,14 @@ const slotsBox = document.getElementById('slots');
 const nextBtn = document.getElementById('next');
 const msg = document.getElementById('msg');
 let selectedTime = null;
+let loadId = 0;   // bo qua ket qua cu khi nguoi dung doi ngay lien tiep
 
 dateInput.min = todayIso();
 const saved = JSON.parse(sessionStorage.getItem('booking') || 'null');
 if (saved) dateInput.value = saved.date;
 
 async function loadSlots() {
+  const myId = ++loadId;
   hide(msg);
   selectedTime = null;
   nextBtn.disabled = true;
@@ -19,6 +21,7 @@ async function loadSlots() {
   if (!dateInput.value) return;
   try {
     const slots = await api('/api/slots?date=' + encodeURIComponent(dateInput.value));
+    if (myId !== loadId) return;
     slots.forEach(function (s) {
       const b = document.createElement('button');
       b.type = 'button';
@@ -36,7 +39,7 @@ async function loadSlots() {
       slotsBox.appendChild(b);
     });
   } catch (err) {
-    showError(msg, err.message);
+    if (myId === loadId) showError(msg, err.message);
   }
 }
 
